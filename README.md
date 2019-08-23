@@ -40,7 +40,20 @@ private int minuteInSeconds; // Minute in Seconds
 
 #### C4 Poorly Written Comment
 The comment is not brief, concise, polite or correctly spelled. 
+
 Suggestion: Update it.
+````
+rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
+
+/**
+ * This method returns the Nth bit that is set in the bit array. The
+ * current position is cached in the following 4 variables and will
+ * help speed up a sequence of next() call in an index iterator. This
+ * method is a mess, but it is fast and it works, so don't fuck with it.  <-- unnecessary comment in jdk
+ */
+````
+[Typo comment in JDK](http://cr.openjdk.java.net/~afarley/8215217/webrev/src/java.desktop/share/classes/com/sun/media/sound/SoftChannel.java.cdiff.html)
+[Unnecessary comment in JDK](http://cr.openjdk.java.net/~afarley/8215217/webrev/src/java.xml/share/classes/com/sun/org/apache/xalan/internal/xsltc/dom/BitArray.java.cdiff.html)
 
 #### C5 Commented-Out Code
 Any commented code.
