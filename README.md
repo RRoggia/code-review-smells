@@ -68,9 +68,19 @@ private int age;
 private int numberOfCats;
 ````
 
-### Environment 
-* E1: Build Requires More Than One Step Builds should require one command to check out and one command to run. 
-* E2: Tests Require More Than One Step Tests should be run with one button click through an IDE, or else with one command. 
+## Environment 
+### E1: Build Requires More Than One Step 
+Builds should require one command to check out and one command to run.
+````
+git clone https://github.wdf.sap.corp/I840973/code-review.git
+[mvn clean install | gradle build] 
+````
+
+### E2: Tests Require More Than One Step
+Tests should be run with one button click through an IDE, or else with one command. 
+````
+[mvn test | gradle test]
+````
 
 ### Functions 
 * F1: Too Many Arguments Functions should have no arguments, then one, then two, then three. No more than three. 
