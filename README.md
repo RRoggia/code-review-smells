@@ -97,7 +97,17 @@ Tests should be run with one button click through an IDE, or else with one comma
 
 ## Functions 
 ### F1 Too Many Arguments 
-Functions should have no arguments, then one, then two, then three. No more than three. 
+Ideally, functions shouldn't have arguments, if not possible, one, two at max three. The bigger the argument's number the higher is the consumer's pain to use the function. It's also more difficult to achieve a good test coverage for the function.
+
+Suggestion: Consider refactoring.
+
+:-1:
+````java
+public boolean doSomething(String arg1, String arg2, String arg3, String arg4, String arg5) {
+  //
+}
+````
+
 ### F2 Output Arguments
 Arguments are inputs, not outputs. If somethings state must be changed, let it be the state of the called object. 
 ### F3 Flag Arguments
