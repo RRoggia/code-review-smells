@@ -109,11 +109,28 @@ public boolean doSomething(String arg1, String arg2, String arg3, String arg4, S
 ````
 
 ### F2 Output Arguments
-Arguments are inputs, not outputs. If somethings state must be changed, let it be the state of the called object. 
+
+
 ### F3 Flag Arguments
-Eliminate boolean arguments. 
+`boolean` arguments used to create two branches of code are explicitly showing that the code does has more than one responsibility.
+
+Suggestion: Consider refactoring.
+
+:-1:
+````java
+public boolean doAorB(boolean bool) {
+    if (bool) {
+        //do A
+    } else {
+        //do B
+    }
+}
+````
+
+
 ### F4 Dead Function
-Discard uncalled methods. This is dead code. 
+
+
 
 ### General 
 * G1: Multiple Languages in One Source File Minimize the number of languages in a source file. Ideally, only one. 
