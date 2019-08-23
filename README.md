@@ -174,6 +174,24 @@ public void read(MyObject myObject) {
 ````
 
 ### G3 Incorrect Behavior at the Boundaries
+It's not uncommon to find bugs in the boundaries of the system. 
+
+Suggestion: Ensure boundaries are being tested.
+
+:-1:
+````java
+public void doSomething(String word) {
+        switch (word.toUpperCase()){
+        case "WORD1":
+            System.out.println("do1 and exit");  // <-- didn't test this case statement and forgot break statement. Bug
+        case "WORD2":
+            System.out.println("do2 and exit");
+            break;
+        default:
+            System.out.println("exit");
+        }
+    }
+````
 
 ### G4 Overridden Safeties 
 
