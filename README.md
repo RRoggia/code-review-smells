@@ -49,7 +49,7 @@ The comment is not brief, concise, polite or correctly spelled.
 Suggestion: Update it.
 
 :-1:
-````
+````java
 rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
 
 /**
