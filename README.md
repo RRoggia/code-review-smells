@@ -82,11 +82,15 @@ Tests should be run with one button click through an IDE, or else with one comma
 [mvn test | gradle test]
 ````
 
-### Functions 
-* F1: Too Many Arguments Functions should have no arguments, then one, then two, then three. No more than three. 
-* F2: Output Arguments Arguments are inputs, not outputs. If somethings state must be changed, let it be the state of the called object. 
-* F3: Flag Arguments Eliminate boolean arguments. 
-* F4: Dead Function Discard uncalled methods. This is dead code. 
+## Functions 
+### F1 Too Many Arguments 
+Functions should have no arguments, then one, then two, then three. No more than three. 
+### F2 Output Arguments
+Arguments are inputs, not outputs. If somethings state must be changed, let it be the state of the called object. 
+### F3 Flag Arguments
+Eliminate boolean arguments. 
+### F4 Dead Function
+Discard uncalled methods. This is dead code. 
 
 ### General 
 * G1: Multiple Languages in One Source File Minimize the number of languages in a source file. Ideally, only one. 
