@@ -157,8 +157,21 @@ public class Class {
 
 ## General 
 ### G1 Multiple Languages in One Source File
+Having multiple languages in the same source file difficults readability.
+
+Suggestion: Split in different source files.
 
 ### G2 Obvious Behavior is Unimplemented
+Always implement the obvious expected behavior, otherwise developers will lose confidence in your code.
+
+Suggestion: Implement the obvious behavior, or if not possible you should explain in the documentation why not.
+
+:-1:
+````java
+public void read(MyObject myObject) {
+    write(myObject);
+}
+````
 
 ### G3 Incorrect Behavior at the Boundaries
 
