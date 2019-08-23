@@ -53,6 +53,7 @@ rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
  */
 ````
 [Typo comment in JDK](http://cr.openjdk.java.net/~afarley/8215217/webrev/src/java.desktop/share/classes/com/sun/media/sound/SoftChannel.java.cdiff.html)
+
 [Unnecessary comment in JDK](http://cr.openjdk.java.net/~afarley/8215217/webrev/src/java.xml/share/classes/com/sun/org/apache/xalan/internal/xsltc/dom/BitArray.java.cdiff.html)
 
 #### C5 Commented-Out Code
