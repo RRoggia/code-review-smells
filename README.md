@@ -5,8 +5,9 @@
 Comments should be about the code or project. It shouldn't contains metadata information (git issues, backlog numbers, change history).
 
 Suggestion: Delete or update it.
+
+:-1:
 ```` java
-[DON'T]
 /* 
  * Change history:
  * Renan Roggia - 8/23/2019 - added behavior X
@@ -18,6 +19,8 @@ Suggestion: Delete or update it.
 Any comment that does not reflect the actual state of the code.
 
 Suggestion: Delete or update it.
+
+:-1:
 ````java
 private int minuteInSeconds; // Minute in milliseconds
 ````
@@ -26,6 +29,8 @@ private int minuteInSeconds; // Minute in milliseconds
 When the comment don't add any information.
 
 Suggestion: Delete or update it.
+
+:-1:
 ````java
 private int minuteInSeconds; // Minute in Seconds
 
@@ -42,6 +47,8 @@ private int minuteInSeconds; // Minute in Seconds
 The comment is not brief, concise, polite or correctly spelled. 
 
 Suggestion: Update it.
+
+:-1:
 ````
 rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
 
@@ -60,6 +67,8 @@ rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
 Any commented code.
 
 Suggestion: Delete it, you can always use the version control system to retrieve it.
+
+:-1:
 ````java
 private String name;
 private int age; 
@@ -71,6 +80,8 @@ private int numberOfCats;
 ## Environment 
 ### E1: Build Requires More Than One Step 
 Builds should require one command to check out and one command to run.
+
+:+1:
 ````
 git clone https://github.wdf.sap.corp/I840973/code-review.git
 [mvn clean install | gradle build] 
@@ -78,6 +89,8 @@ git clone https://github.wdf.sap.corp/I840973/code-review.git
 
 ### E2: Tests Require More Than One Step
 Tests should be run with one button click through an IDE, or else with one command. 
+
+:+1:
 ````
 [mvn test | gradle test]
 ````
