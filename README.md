@@ -1,7 +1,7 @@
 # Clean Code - Smells and Heuristics
 
-### Comments
-#### C1 Inappropriate Information
+## Comments
+### C1 Inappropriate Information
 Comments should be about the code or project. It shouldn't contains metadata information (git issues, backlog numbers, change history).
 
 Suggestion: Delete or update it.
@@ -14,7 +14,7 @@ Suggestion: Delete or update it.
  */
 ````
 
-#### C2 Obsolete Comment
+### C2 Obsolete Comment
 Any comment that does not reflect the actual state of the code.
 
 Suggestion: Delete or update it.
@@ -22,7 +22,7 @@ Suggestion: Delete or update it.
 private int minuteInSeconds; // Minute in milliseconds
 ````
 
-#### C3 Redundant Comment
+### C3 Redundant Comment
 When the comment don't add any information.
 
 Suggestion: Delete or update it.
@@ -38,7 +38,7 @@ private int minuteInSeconds; // Minute in Seconds
  }
 ````
 
-#### C4 Poorly Written Comment
+### C4 Poorly Written Comment
 The comment is not brief, concise, polite or correctly spelled. 
 
 Suggestion: Update it.
@@ -56,7 +56,7 @@ rpnChange(0, 2 << 7);   // Bitch Bend sensitivity  <-- typo in jdk
 
 [Unnecessary comment in JDK](http://cr.openjdk.java.net/~afarley/8215217/webrev/src/java.xml/share/classes/com/sun/org/apache/xalan/internal/xsltc/dom/BitArray.java.cdiff.html)
 
-#### C5 Commented-Out Code
+### C5 Commented-Out Code
 Any commented code.
 
 Suggestion: Delete it, you can always use the version control system to retrieve it.
