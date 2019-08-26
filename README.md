@@ -161,6 +161,21 @@ Having multiple languages in the same source file difficults readability.
 
 Suggestion: Split in different source files.
 
+:-1:
+````java
+public void doSomething(String title) {
+    String html = "<!DOCTYPE html>\r\n" + "<html>\r\n" + "<head>\r\n" + "    <title>Something</title>\r\n"
+                + "</head>\r\n" + "<body>\r\n" + "    <div>\r\n" + "        <h1>First div title</h1>\r\n"
+                + "        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>\r\n"
+                + "    </div>\r\n" + "\r\n" + "    <div>\r\n" + "        <h1>Second div title</h1>\r\n"
+                + "        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>\r\n"
+                + "    </div>\r\n" + "</body>\r\n" + "</html>";
+
+    html = html.replace("Something", title);
+    System.out.println(html);
+}
+````
+
 ### G2 Obvious Behavior is Unimplemented
 Always implement the obvious expected behavior, otherwise developers will lose confidence in your code.
 
