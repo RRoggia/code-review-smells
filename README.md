@@ -209,6 +209,24 @@ public void doSomething(String word) {
 ````
 
 ### G4 Overridden Safeties 
+Test and compiler checks are usefull to warn you something might be wrong. Disabling it will only bring you troubles.
+
+Suggestion: fix the test, in case of compiler warning only disable it if you are certain the error won't happen and add a comment explaing why.
+
+:-1:
+````java
+@Ignore
+@Test
+public void testSomething() {
+    //
+}
+
+@SuppressWarnings("unchecked")
+public <E> E[] doSomething(E... vararg) {
+    return vararg;
+}
+
+````
 
 ### G5 Duplication 
 
