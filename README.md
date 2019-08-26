@@ -2,28 +2,14 @@
 
 ### [Comments](https://github.wdf.sap.corp/I840973/code-review/blob/master/COMMENTS.md)
 * C1 Inappropriate Information
-* C2 Obsolete Comment Update or delete obsolete comments. 
-* C3 Redundant Comment A redundant comment describes something able to sufficiently describe itself. 
-* C4 Poorly Written Comment Comments should be brief, concise, correctly spelled. 
-* C5 Commented-Out Code Ghost code. Delete it. 
+* C2 Obsolete Comment
+* C3 Redundant Comment
+* C4 Poorly Written Comment 
+* C5 Commented-Out Code
 
-## Environment 
-### E1: Build Requires More Than One Step 
-Builds should require one command to check out and one command to run.
-
-:+1:
-````
-git clone https://github.wdf.sap.corp/I840973/code-review.git
-[mvn clean install | gradle build] 
-````
-
-### E2: Tests Require More Than One Step
-Tests should be run with one button click through an IDE, or else with one command. 
-
-:+1:
-````
-[mvn test | gradle test]
-````
+### [Environment](https://github.wdf.sap.corp/I840973/code-review/blob/master/ENVIRONMENT.md)
+* E1 Build Requires More Than One Step
+* E2 Tests Require More Than One Step
 
 ## Functions 
 ### F1 Too Many Arguments 
