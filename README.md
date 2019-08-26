@@ -189,7 +189,7 @@ public void read(MyObject myObject) {
 ````
 
 ### G3 Incorrect Behavior at the Boundaries
-It's not uncommon to find bugs in the boundaries of the system. 
+It's common to find bugs in the boundaries of the system. 
 
 Suggestion: Ensure boundaries are being tested.
 
@@ -211,7 +211,7 @@ public void doSomething(String word) {
 ### G4 Overridden Safeties 
 Test and compiler checks are usefull to warn you something might be wrong. Disabling it will only bring you troubles.
 
-Suggestion: fix the test, in case of compiler warning only disable it if you are certain the error won't happen and add a comment explaing why.
+Suggestion: fix the test, in case of compiler warning, refactor or only disable it if you are certain the error won't happen and add a comment explaing why.
 
 :-1:
 ````java
@@ -229,6 +229,34 @@ public <E> E[] doSomething(E... vararg) {
 ````
 
 ### G5 Duplication 
+Whenver you find duplicate code, it means you lost a chance for abstraction. Duplicated identical code, repetition of `switch/case` and `if/else` in several methods, same implementation of an algorithm but written differently.
+
+Suggestion: Simplify by adding a layer of abstraction.
+
+:-1:
+````java
+public String getStringWithBiggerLength(List<String> words) {
+    String wordWithBiggerLength = words.get(0);
+
+    for (int i = 1; i < words.size(); i++) {
+        if (wordWithBiggerLength.length() < words.get(i).length()) {
+            wordWithBiggerLength = words.get(i);
+        }
+    }
+    return wordWithBiggerLength;
+}
+
+public boolean isBiggerThanWordWithBiggerLenght(List<String> words, String word) {
+    String wordWithBiggerLength = words.get(0);
+
+    for (int i = 1; i < words.size(); i++) {
+        if (wordWithBiggerLength.length() < words.get(i).length()) {
+            wordWithBiggerLength = words.get(i);
+        }
+    }
+    return wordWithBiggerLength.length() < word.length();
+}
+````
 
 ### G6 Code at Wrong Level of Abstraction 
 
