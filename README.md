@@ -259,6 +259,31 @@ public boolean isBiggerThanWordWithBiggerLenght(List<String> words, String word)
 ````
 
 ### G6 Code at Wrong Level of Abstraction 
+Keep consistent the level of abstraction you are using in your code, component, module, system ...
+
+Suggestion: Refactor to achieve the same abstraction level of the rest of your code...
+
+:-1:
+````java
+public Document persist(Document document) {
+    validate(document);
+
+    if (alreadyExists(document)) {
+        return document;
+     }
+
+    Connection conn = null;
+    Properties connectionProps = new Properties();
+    connectionProps.put("user", this.userName);
+    connectionProps.put("password", this.password);
+
+    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", connectionProps);
+        
+    Statement stmt = conn.createStatement();
+        
+    stmt.executeUpdate("insert into ...");
+}
+````
 
 ### G7 Base Classes Depending on Their Derivatives 
 
