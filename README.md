@@ -326,6 +326,34 @@ class ServiceClazz2{
 ````
 
 ### G8 Too Much Information 
+A well defined API has just enought information to do a lot with litle information. The less information you expose the less coupling with client classes.
+
+Suggestion: Reduce the information you are exposing.
+
+:-1:
+````java
+public class Something {
+    public String somethingInternal;
+    public static final String INTERNAL_ERROR = "INTERNAL ERROR";
+    
+    public void doSomething() {
+        //
+    }
+    
+    public void doLessThanSomething() {
+        //
+    }
+    
+    public void doLessThanLessSomething() {
+        //
+    }
+    
+    public String getSomethingInternal() {
+        return somethingInternal;
+    }
+}
+````
+
 
 ### G9 Dead Code
 
