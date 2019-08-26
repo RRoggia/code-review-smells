@@ -286,6 +286,44 @@ public Document persist(Document document) {
 ````
 
 ### G7 Base Classes Depending on Their Derivatives 
+Breaking the logic of a base class in deratives, means you are adding an abstraction level in your code. Therefore, if the base class is dependant of the derivative class' internal behaviors, there might be a problem.
+
+Suggestion: Refactor the base class to not depend on the derivative internal behavior.
+
+:-1:
+````java
+class ControllerClazz{
+    
+    public void doSomething(){
+        ServiceClazz serviceClazz = new ServiceClazz();
+        List<String> namesSorted = serviceClazz.getNamesSorted();
+        
+        for(String name: namesSorted) {
+            //
+        }
+            
+        new ServiceClazz2().doSomething();
+    }
+    
+}
+
+class ServiceClazz{
+    public void doSomething() {
+        getNamesSorted();
+        //
+    }
+    
+    public List<String> getNamesSorted(){
+        //
+    }
+}
+
+class ServiceClazz2{
+    public void doSomething() {
+        
+    }
+}
+````
 
 ### G8 Too Much Information 
 
