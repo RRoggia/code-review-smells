@@ -378,6 +378,26 @@ public void doSomething(String name) {
 ````
 
 ### G10 Vertical Separation 
+When a variable or function is declared far away from its usage.
+
+Suggestion: Declare variables before its use, declare functions below its invocation.
+
+:-1:
+````java
+public void doSomething() {
+    String name;
+    int age;
+    String city;
+        
+    doAnotherthing();
+    processWhatever();
+    //...
+        
+    System.out.println(name);
+    System.out.println(age);
+    System.out.println(city);
+}
+````
 
 ### G11 Inconsistency 
 
