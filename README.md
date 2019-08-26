@@ -356,6 +356,26 @@ public class Something {
 
 
 ### G9 Dead Code
+Any code that is unreacheable. Either because it got old, or because it's a conditional that not happen.
+
+Suggestion: Remove it.
+
+:-1:
+````java
+public void doSomething() throws IllegalArgumentException {
+    // never throws IllegalArgumentException
+}
+
+public void doSomething(String name) {
+    Objects.requireNonNull(name);
+
+    if (name == null) {
+        throw new NullPointerException("Null pointer");
+    }
+
+    System.out.println(name);
+}
+````
 
 ### G10 Vertical Separation 
 
