@@ -257,7 +257,7 @@ public void doAnotherThing(HttpServletRequest servlet) {
 //
 }
     
-public void doAThirdThing(HttpServletRequest http) {
+public void doAThirdThing(HttpServletRequest request) {
 //        
 }
 ````
