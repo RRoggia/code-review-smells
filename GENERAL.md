@@ -243,6 +243,24 @@ public void doSomething() {
 ````
 
 ## G11 Inconsistency 
+When decided over a convetion, apply it consistently in other similar situation to avoid surprises and improve readbility.
+
+Suggestion: Refactor the code to achieve the convention.
+
+:-1:
+````java
+public void doSomething(HttpServletRequest request) {
+//
+}
+    
+public void doAnotherThing(HttpServletRequest servlet) {
+//
+}
+    
+public void doAThirdThing(HttpServletRequest http) {
+//        
+}
+````
 
 ## G12 Clutter
 
