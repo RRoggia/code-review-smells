@@ -437,6 +437,22 @@ public void getDocumentsAndPrintSortedByName() {
 ````
 
 ## G23 Prefer Polymorphism to If/Else or Switch/Case
+Using `if/else` or `switch/case` statements difficults the addition of new classes without changing existing functions.
+
+Suggestion: Unless is more likely to have new functions than new classes. Refactor the code to use polymorphism.
+
+:-1:
+````java
+public double area(Object shape) {
+    if (shape instanceof Square) {
+        Square s = (Square) shape;
+        return s.getSide() * s.getSide();
+    } else if(shape instanceof Circle) {
+        Circle c = (Circle) shape;
+        return Math.PI * c.getRadius() * c.getRadius();
+    }
+}
+````
 
 ## G24 Follow Standard Conventions
 
