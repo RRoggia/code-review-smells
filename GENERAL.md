@@ -416,6 +416,9 @@ Date newDate = date.add(5);
 ````
 
 ## G21 Understand the Algorithm
+Making the algorith work is not enough, you should comprehend it. Not comprehending it leads to messy code.
+
+Suggestion: Refactor the code to make the algorithm more clear and easier to comprehend.
 
 ## G22 Make Logical Dependencies Physical
 
