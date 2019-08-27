@@ -277,8 +277,44 @@ public class Class {
 ````
 
 ## G13 Artificial Coupling 
+A generic variable, constant, function or enum is placed within a specific class.
+
+Suggestion: Decouple the generic component from the specific component.
+
+:-1:
+````java
+public class Clazz {
+    public static enum Country {
+        BR, AR, US, GE;
+    }
+}
+
+public class ClientCode {
+    public static void main(String[] args) {
+        System.out.println(Clazz.Country.AR);
+    }
+}
+````
 
 ## G14 Feature Envy
+When a method uses getters and setters from other classes to manipulate this object, the method is envying the feature of the object.
+
+Suggestion: Move the the method that is envying the feature to the object.
+
+:-1:
+````java
+public class HourlyPayCalculator {
+    public Money calculateWeeklyPay(HourlyEmployee e) {
+        int tenthRate = e.getTenthRate().getPennies();
+        int tenthsWorked = e.getTenthWorded();
+        int straightTime = Math.min(400, tenthsWorked);
+        int overTime = Math.max(0, tenthsWorked - straightTime);
+        int straightPay = straightTime * tenthRate;
+        int overtimePay = (int) Math.round(overTime * tenthRate * 1.5);
+        return new Money(straightPay + overTime);
+    }
+}
+````
 
 ## G15 Selector Arguments
 
