@@ -475,6 +475,16 @@ public void AnOtHeRtHiNg() {
 ````
 
 ## G25 Replace Magic Numbers with Named Constants 
+Any token that posses a value that is not self-explanatory.
+
+Suggestion:Move the value to a constant variable.
+
+:-1:
+````java
+public double calculateSalary(int overtime) {
+    return (8 * 22 + overtime) * 22.5;
+}
+````
 
 ## G26 Be Precise 
 
