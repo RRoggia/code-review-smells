@@ -391,6 +391,19 @@ public class StraightHourlyPayCalculator {
 ````
 
 ## G19 Use Explanatory Variables
+The code readability could improve by adding intermediary variables with descritive names.
+
+Suggestion: Add intermediary variables with descritive names.
+
+:+1:
+````java
+Matcher match = headerPattern.matcher(line);
+if (match.find()) {
+    String key = match.group(1);
+    String value = match.group(2);
+    headers.put(key.toLowerCase(), value);
+}
+````
 
 ## G20 Function Names Should Say What They Do
 
