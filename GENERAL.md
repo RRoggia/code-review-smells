@@ -455,6 +455,24 @@ public double area(Object shape) {
 ````
 
 ## G24 Follow Standard Conventions
+Code not following the standard convetions
+
+Suggestion: Apply the standard conventions
+
+:-1:
+````java
+public void DO_SOMETHING()
+{
+    if (true) {
+        System.out.println("something");
+    }
+}
+    
+public void AnOtHeRtHiNg() {
+    if(!false)
+        System.out.println("another thing");
+}
+````
 
 ## G25 Replace Magic Numbers with Named Constants 
 
