@@ -407,6 +407,7 @@ if (match.find()) {
 
 ## G20 Function Names Should Say What They Do
 
+
 ## G21 Understand the Algorithm
 
 ## G22 Make Logical Dependencies Physical
