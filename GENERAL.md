@@ -487,6 +487,26 @@ public double calculateSalary(int overtime) {
 ````
 
 ## G26 Be Precise 
+Be precise with the decision you are taking in your code. Innacuracy code leads to ambiguity and messy code.
+
+Suggestion: Update or remove inprecission.
+
+:-1:
+````java
+// using double for amounts
+public double payDebt(double amount) {
+    debt = debt - amount;
+}
+
+// not handling null cases
+public void doSomething() {
+    getStringOrReturnNull().concat("never gonna give it up");
+}
+    
+public String getStringOrReturnNull() {
+    return null;
+}
+````
 
 ## G27 Structure Over Convention
 
