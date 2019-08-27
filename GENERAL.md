@@ -306,17 +306,34 @@ Suggestion: Move the the method that is envying the feature to the object.
 public class HourlyPayCalculator {
     public Money calculateWeeklyPay(HourlyEmployee e) {
         int tenthRate = e.getTenthRate().getPennies();
-        int tenthsWorked = e.getTenthWorded();
+        int tenthsWorked = e.getTenthsWorked();
         int straightTime = Math.min(400, tenthsWorked);
         int overTime = Math.max(0, tenthsWorked - straightTime);
         int straightPay = straightTime * tenthRate;
         int overtimePay = (int) Math.round(overTime * tenthRate * 1.5);
-        return new Money(straightPay + overTime);
+        return new Money(straightPay + overtimePay);
     }
 }
 ````
 
 ## G15 Selector Arguments
+Selector arguments are a lazy to not split a big function into several smaller functions.
+
+Suggestion: Break function into smaller functions.
+
+:-1:
+````java
+public int calculateWeeklyPay(boolean overtime) {
+    int tenthRate = getTenthRate();
+    int tenthsWorked = getTenthsWorked();
+    int straightTime = Math.min(400, tenthsWorked);
+    int overTime = Math.max(0, tenthsWorked - straightTime);
+    int straightPay = straightTime * tenthRate;
+    double overtimeRate = overtime ? 1.5 : 1.0 * tenthRate;
+    int overtimePay = (int) Math.round(overTime * overtimeRate);
+    return straightPay + overtimePay;
+}
+````
 
 ## G16 Obscured Intent 
 
