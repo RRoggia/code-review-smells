@@ -541,7 +541,14 @@ public void doSomething() {
 }
 ````
 ## G29 Avoid Negative Conditionals
+Negative boolean expressions are harder to read than positive.
 
+Suggestion: Change it to be a poisitive boolean expression.
+
+:-1:
+````java
+if(!buffer.shouldNotCompact())
+````
 ## G30 Functions Should Do One Thing
 
 ## G31 Hidden Temporal Couplings
