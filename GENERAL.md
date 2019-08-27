@@ -406,7 +406,14 @@ if (match.find()) {
 ````
 
 ## G20 Function Names Should Say What They Do
+Function name is misleading or is ambiguous.
 
+Suggestion: Rename the function name to better describe it.
+
+:-1:
+````java
+Date newDate = date.add(5);
+````
 
 ## G21 Understand the Algorithm
 
