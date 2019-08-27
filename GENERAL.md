@@ -421,6 +421,20 @@ Making the algorith work is not enough, you should comprehend it. Not comprehend
 Suggestion: Refactor the code to make the algorithm more clear and easier to comprehend.
 
 ## G22 Make Logical Dependencies Physical
+One should not assume behaviors of a module you are dependent.
+
+Suggestion: Refactor to remove the assumption of your code.
+
+:-1:
+````java
+public void getDocumentsAndPrintSortedByName() {
+    List<Document> documents = databaseConnection.getDocuments();
+
+    for (Document document: documents) {
+        System.out.println(document);
+    }
+}
+````
 
 ## G23 Prefer Polymorphism to If/Else or Switch/Case
 
