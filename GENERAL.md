@@ -509,6 +509,22 @@ public String getStringOrReturnNull() {
 ````
 
 ## G27 Structure Over Convention
+Project decision should be based on structure over conventions.
+
+Suggestions: Refactor the code to use polymorphism.
+
+:-1:
+````java
+public double area(Object shape) {
+    if (shape instanceof Square) {
+        Square s = (Square) shape;
+        return s.getSide() * s.getSide();
+    } else if(shape instanceof Circle) {
+        Circle c = (Circle) shape;
+        return Math.PI * c.getRadius() * c.getRadius();
+    }
+}
+````
 
 ## G28 Encapsulate Conditionals
 
