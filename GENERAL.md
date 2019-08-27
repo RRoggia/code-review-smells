@@ -527,7 +527,19 @@ public double area(Object shape) {
 ````
 
 ## G28 Encapsulate Conditionals
+Complex boolean expressions don't express motivation and are hard to read.
 
+Suggestions: Extract boolean expression to variable with descriptive name.
+
+:-1:
+````java
+public void doSomething() {
+        if (((age > 18 && age < 50) || Date.from(Instant.now()).after(birthday) && city != "Chicago")
+                || ((age > 18) && country != "Brazil")) {
+        System.out.println("Allowed");
+    }
+}
+````
 ## G29 Avoid Negative Conditionals
 
 ## G30 Functions Should Do One Thing
