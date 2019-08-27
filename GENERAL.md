@@ -364,6 +364,31 @@ public class Salary {
 ````
 
 ## G18 Inappropriate Static
+A function should be static if it's not dependent on instances and takes all its dependencies from the parameters. It will be innapropriate static if the function fulfills the items above but could benefit from polimorphism.
+
+Suggestion: Change it to an instance member.
+
+:-1:
+````java
+
+public class HourlyPayCalculator {
+    public static int calculatePay(Employee e, double overtimeRate) {
+        //
+    }
+}
+
+public class OvertimeHourlyPayCalculator {
+    public static int calculatePay(Employee e, double overtimeRate) {
+        //
+    }
+}
+
+public class StraightHourlyPayCalculator {
+    public static int calculatePay(Employee e, double overtimeRate) {
+        //
+    }
+}
+````
 
 ## G19 Use Explanatory Variables
 
