@@ -336,6 +336,16 @@ public int calculateWeeklyPay(boolean overtime) {
 ````
 
 ## G16 Obscured Intent 
+The code must be clear and expressive. Magic numbers, hungarian notation and continuous expressions make harder to read the code.
+
+Suggestion: Refactor to remove the above mentioned smells.
+
+:-1:
+````java
+public int m_otCalc() {
+    return iThsWkd * iThsRte + (int) Math.round(0.5* iThsRte * Math.max(0, iThsWkd - 400));
+}
+````
 
 ## G17 Misplaced Responsibility 
 
