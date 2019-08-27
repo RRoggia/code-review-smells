@@ -263,6 +263,18 @@ public void doAThirdThing(HttpServletRequest request) {
 ````
 
 ## G12 Clutter
+Methods, attributes and variables that are not used, comments that don't add anything.
+
+Suggestion: Remove the clutter from your code.
+
+:-1:
+````java
+public class Class {
+    private void dontDoSomething() {
+        // unreacheable by client code and never used locally.
+    }
+}
+````
 
 ## G13 Artificial Coupling 
 
