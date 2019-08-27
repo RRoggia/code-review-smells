@@ -348,6 +348,20 @@ public int m_otCalc() {
 ````
 
 ## G17 Misplaced Responsibility 
+The code is breaking the principle of least surprise. It's not placed in the right class, module or scope.
+
+Suggestion: Change the code to a place where the reader would expect.
+
+:-1:
+````java
+public class Salary {
+    public static final double PI = 3.14159265358979323846;
+
+    public double getSalary() {
+        return PI * 1000;
+    }
+}
+````
 
 ## G18 Inappropriate Static
 
