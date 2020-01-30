@@ -1,23 +1,23 @@
 # Clean Code - Smells and Heuristics
 
-### [Comments](https://github.wdf.sap.corp/I840973/code-review/blob/master/COMMENTS.md)
+### [Comments](./COMMENTS.md)
 * C1 Inappropriate Information
 * C2 Obsolete Comment
 * C3 Redundant Comment
 * C4 Poorly Written Comment 
 * C5 Commented-Out Code
 
-### [Environment](https://github.wdf.sap.corp/I840973/code-review/blob/master/ENVIRONMENT.md)
+### [Environment](./ENVIRONMENT.md)
 * E1 Build Requires More Than One Step
 * E2 Tests Require More Than One Step
 
-### [Functions](https://github.wdf.sap.corp/I840973/code-review/blob/master/FUNCTIONS.md)
+### [Functions](./FUNCTIONS.md)
 * F1 Too Many Arguments
 * F2 Output Arguments
 * F3 Flag Arguments
 * F4 Dead Function
 
-### [General](https://github.wdf.sap.corp/I840973/code-review/blob/master/GENERAL.md)
+### [General](./GENERAL.md)
 * G1 Multiple Languages in One Source File
 * G2 Obvious Behavior is Unimplemented
 * G3 Incorrect Behavior at the Boundaries
